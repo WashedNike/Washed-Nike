@@ -21,7 +21,32 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="aio\bot.py" />
+    <Compile Include="aio\task.py" />
+    <Compile Include="aio\utilities.py" />
+    <Compile Include="aio\wrapper.py" />
+    <Compile Include="aio\__init__.py" />
+    <Compile Include="api\supreme.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="api\__init__.py" />
+    <Compile Include="bots\supremebot.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="bots\__init__.py" />
+    <Compile Include="proxymanager\manager.py" />
+    <Compile Include="proxymanager\__init__.py" />
+    <Compile Include="taskdb\db.py" />
+    <Compile Include="taskdb\task.py" />
+    <Compile Include="taskdb\__init__.py" />
     <Compile Include="WashedNike.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="aio\" />
+    <Folder Include="api\" />
+    <Folder Include="bots\" />
+    <Folder Include="proxymanager\" />
+    <Folder Include="taskdb\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
