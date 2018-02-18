@@ -1,1 +1,0 @@
-from bots.supremebot import SupremeBot

@@ -1,22 +1,24 @@
-import logging
-import os
-import time
-import traceback
+from datetime import datetime
+from termcolor import cprint, colored
 
-def create_logger(logger_name):
-    logger = logging.getLogger(logger_name)
-    logger.setLevel(logging.DEBUG)
+import colorama
+colorama.init()
 
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+def n_logging(text):
+	print("{} {}".format(b_(), text))
 
-    os.makedirs('logs', exist_ok=True)
-    log_file_path = 'logs/{}'.format(logger_name)
-    handler = logging.FileHandler(log_file_path, 'a')
-    handler.setFormatter(formatter)
-    logger.addHandler(handler) # Log to file
+def c_logging(value, colour):
+	text = colored(value, colour)
+	print("{} {}".format(b_(), text))
 
-    console_handler = logging.StreamHandler()
-    console_handler.setFormatter(formatter)
-    logger.addHandler(console_handler) # Log to console
+def c_print(value, colour):
+	text = colored(value, colour)
+	print(text)
 
-    return logger
+def b_():
+    timestamp = str("["+datetime.now().strftime("%H:%M:%S.%f")[:-3]+"]")
+    return timestamp
+
+def stamp():
+	timestamp = datetime.now().strftime("%H:%M:%S")
+	return timestamp

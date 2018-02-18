@@ -26,15 +26,21 @@
     <Compile Include="aio\utilities.py" />
     <Compile Include="aio\wrapper.py" />
     <Compile Include="aio\__init__.py" />
-    <Compile Include="api\supreme.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="api\__init__.py" />
-    <Compile Include="bots\supremebot.py">
+    <Compile Include="bots\__init__.py" />
+    <Compile Include="gui\botgui.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="bots\__init__.py" />
-    <Compile Include="gui\gui.py">
+    <Compile Include="gui\product.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gui\productman.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gui\profileman.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gui\settings.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="gui\__init__.py">
@@ -54,9 +60,6 @@
     <Folder Include="gui\" />
     <Folder Include="proxymanager\" />
     <Folder Include="taskdb\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="gui\washednike.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

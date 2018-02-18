@@ -22,10 +22,3 @@ class Task(object):
 
     def get_status(self):
         return self.status_dict['status']
-
-    def log(self, info):
-        self.logs.append(info)
-        self.logger.info(info)
-
-    def get_logs(self):
-        return self.logs
